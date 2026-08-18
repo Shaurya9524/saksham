@@ -1,0 +1,48 @@
+.wrap {
+  display: inline-flex;
+  gap: 0.4rem;
+  padding: 0.3rem;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: transparent;
+  color: var(--color-ink-soft);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.active {
+  background: var(--color-bg);
+  color: var(--color-primary);
+  box-shadow: 0 1px 3px rgba(17, 24, 39, 0.12);
+}
+
+[data-contrast="high"] .active {
+  box-shadow: none;
+  border: 1.5px solid var(--color-primary);
+}
+
+@media (max-width: 700px) {
+  .wrap {
+    flex-wrap: wrap;
+  }
+  .btn {
+    padding: 0.45rem 0.7rem;
+    font-size: 0.78rem;
+  }
+}

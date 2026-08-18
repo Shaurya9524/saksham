@@ -1,0 +1,138 @@
+.wrap {
+  border-left: 1px solid var(--color-border);
+  background: var(--color-surface);
+  padding: 1.25rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.3rem;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  margin-bottom: 1.25rem;
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.5rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: transparent;
+  color: var(--color-ink-soft);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.tab svg {
+  width: 15px;
+  height: 15px;
+}
+
+.tabActive {
+  background: var(--color-bg);
+  color: var(--color-teal);
+  box-shadow: 0 1px 3px rgba(17, 24, 39, 0.12);
+}
+
+[data-contrast="high"] .tabActive {
+  box-shadow: none;
+  border: 1.5px solid var(--color-teal);
+}
+
+.panelBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.islScreen,
+.camScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  background: #0b1220;
+  color: #ffffff;
+}
+
+[data-contrast="high"] .islScreen,
+[data-contrast="high"] .camScreen {
+  border: 2px solid var(--color-border);
+}
+
+.islHint {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.caption {
+  margin: 0;
+  padding: 0.75rem 0.9rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-teal-soft);
+  color: var(--color-teal);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.progressTrack {
+  width: 70%;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--color-teal);
+  transition: width 0.1s linear;
+}
+
+.pillText {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-ink-soft);
+  text-align: center;
+}
+
+.camActions {
+  display: flex;
+  justify-content: center;
+}
+
+.camBtn,
+.camBtnConfirm {
+  padding: 0.6rem 1.1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+.camBtnConfirm {
+  background: var(--color-emerald);
+  border-color: var(--color-emerald);
+  color: #fff;
+}
+
+[data-contrast="high"] .camBtnConfirm {
+  color: var(--color-on-accent);
+}

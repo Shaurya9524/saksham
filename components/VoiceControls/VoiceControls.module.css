@@ -1,0 +1,80 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-soft);
+  margin-bottom: 1.5rem;
+}
+
+.micBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex: none;
+}
+
+[data-contrast="high"] .micBtn {
+  color: var(--color-on-accent);
+}
+
+.micBtn svg {
+  width: 15px;
+  height: 15px;
+}
+
+.listening {
+  animation: pulseGlow 1s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 var(--color-primary-light);
+  }
+  50% {
+    box-shadow: 0 0 0 6px transparent;
+  }
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--color-ink-soft);
+  flex: 1 1 14rem;
+}
+
+.chips {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chip {
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-primary);
+  background: var(--color-bg);
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.chipActive {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+[data-contrast="high"] .chipActive {
+  color: var(--color-on-accent);
+}
